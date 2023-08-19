@@ -1,0 +1,58 @@
+.artworks {
+	margin: 0 auto;
+	max-width: 800px;
+	text-align: center;
+}
+
+.artwork {
+	&--list {
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-gap: 1rem;
+		grid-auto-flow: dense;
+		list-style-type: none;
+		&-item {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 6px;
+			&:hover {
+				background-color: #f3f3f3;
+			}
+			&_link {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-direction: row;
+				gap: 1rem;
+				text-decoration: none;
+			}
+			&_img {
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+	&--title {
+		margin: 0;
+		font-size: 22px;
+		color: #1a1a1a;
+
+		width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	&--type {
+		margin: 0;
+		font-size: 17px;
+		color: #767676;
+	}
+	&--content {
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+}
