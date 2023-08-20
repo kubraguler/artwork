@@ -1,9 +1,3 @@
-.artworks {
-	margin: 0 auto;
-	max-width: 800px;
-	text-align: center;
-}
-
 .artwork {
 	&--list {
 		padding: 0;
@@ -13,12 +7,16 @@
 		grid-gap: 1rem;
 		grid-auto-flow: dense;
 		list-style-type: none;
+
 		&-item {
 			border: 1px solid rgba(0, 0, 0, 0.1);
 			border-radius: 6px;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 			&:hover {
 				background-color: #f3f3f3;
 			}
+
 			&_link {
 				display: flex;
 				align-items: flex-start;
@@ -27,27 +25,32 @@
 				gap: 1rem;
 				text-decoration: none;
 			}
+
 			&_img {
 				width: 150px;
 				height: 150px;
 			}
 		}
 	}
+
 	&--title {
+		width: 180px;
 		margin: 0;
 		font-size: 22px;
+		line-height: 26px;
 		color: #1a1a1a;
-
-		width: 150px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+
 	&--type {
 		margin: 0;
 		font-size: 17px;
+		line-height: 21px;
 		color: #767676;
 	}
+
 	&--content {
 		padding: 1rem;
 		display: flex;
