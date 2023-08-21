@@ -7,60 +7,57 @@ const ArtworkDetail = () => {
 
 	return (
 		<div className="artwork--detail">
-			{artwork && (
-				<>
-					{artwork && (
-						<>
-							<img
-								className="artwork--list-item_img"
-								src={artwork.thumbnail.lqip}
-								alt={artwork.thumbnail.alt_text}
-							/>
-							{artwork.title && (
-								<p className="artwork--detail-title">
-									<b>Title:</b> {artwork.title}
-								</p>
-							)}
+			<>
+				{artwork.thumbnail?.lqip && (
+					<img
+						className="artwork--list-item_img"
+						src={artwork.thumbnail.lqip}
+						alt={artwork.thumbnail.alt_text}
+					/>
+				)}
 
-							{artwork.place_of_origin && (
-								<p>
-									<b>Place of Origin:</b> {artwork.place_of_origin}
-								</p>
-							)}
+				{artwork.title && (
+					<p className="artwork--detail-title">
+						<b>Title:</b> {artwork.title}
+					</p>
+				)}
 
-							{artwork.inscriptions && (
-								<p>
-									<b>Inscriptions :</b> {artwork.inscriptions}
-								</p>
-							)}
+				{artwork.place_of_origin && (
+					<p>
+						<b>Place of Origin:</b> {artwork.place_of_origin}
+					</p>
+				)}
 
-							{artwork.artist_display && (
-								<p>
-									<b>Artist Display :</b> {artwork.artist_display}
-								</p>
-							)}
+				{artwork.inscriptions && (
+					<p>
+						<b>Inscriptions :</b> {artwork.inscriptions}
+					</p>
+				)}
 
-							{artwork.theme_titles && (
-								<p>
-									<b>Theme Titles :</b> {artwork.theme_titles}
-								</p>
-							)}
+				{artwork.artist_display && (
+					<p>
+						<b>Artist Display :</b> {artwork.artist_display}
+					</p>
+				)}
 
-							{artwork.provenance_text && (
-								<p>
-									<b>Provenance Text:</b> {artwork.provenance_text}
-								</p>
-							)}
+				{artwork.theme_titles && (
+					<p>
+						<b>Theme Titles :</b> {artwork.theme_titles}
+					</p>
+				)}
 
-							{artwork.publication_history && (
-								<p className="artwork--detail-publication">
-									<b>Publication History :</b> {artwork.publication_history}
-								</p>
-							)}
-						</>
-					)}
-				</>
-			)}
+				{artwork.provenance_text && (
+					<p>
+						<b>Provenance Text:</b> {artwork.provenance_text}
+					</p>
+				)}
+
+				{artwork.publication_history && (
+					<p className="artwork--detail-publication">
+						<b>Publication History :</b> {artwork.publication_history}
+					</p>
+				)}
+			</>
 		</div>
 	);
 };

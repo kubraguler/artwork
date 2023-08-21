@@ -26,14 +26,16 @@ const ArtworkList = () => {
 									dispatch(setSelectedArtwork(artwork));
 								}}
 							>
-								<img
-									className="artwork--list-item_img"
-									src={artwork.thumbnail.lqip}
-									alt={artwork.thumbnail.alt_text}
-								/>
+								{artwork.thumbnail?.lqip && (
+									<img
+										className="artwork--list-item_img"
+										src={artwork.thumbnail.lqip}
+										alt={artwork.thumbnail.alt_text}
+									/>
+								)}
+
 								<div className="artwork--content">
 									<p className="artwork--title">{artwork.title}</p>
-									{/* TODO: Title long ... */}
 									<p className="artwork--type">{artwork.artwork_type_title}</p>
 								</div>
 							</Link>
